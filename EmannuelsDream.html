@@ -1,0 +1,162 @@
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .myOtherTable { width:400px;background-color:#f0f0e5;color:#000;font-size:18px; }
+        .myOtherTable th { background-color:#54c081;color:white;width:50%;font-variant:normal; }
+        .myOtherTable td, .myOtherTable th { padding:5px;border:0; }
+        .myOtherTable td { font-family:Georgia, Garamond, serif; border-bottom:1px solid #BDB76B;height:100px; }
+        h2 { font-family: 'Waiting for the Sunrise', cursive; 
+  font-size:20px; 
+  margin: 10px 30px; 
+  letter-spacing: 5px; 
+  font-weight: bold;
+  text-align: center;}
+  .button-85 
+{
+  padding: 0.6em 2em;
+  border:none;
+  outline:none;
+  color:rgb(255, 255, 255);
+  background:#111;
+  cursor:pointer;
+  position:relative;
+  z-index:0;
+  border-radius:10px;
+  user-select:none;
+  -webkit-user-select:none;
+  touch-action:manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+ </style>
+
+
+    <head><title>Emmanuel's Dream</title></head>
+    <body>
+         <center> <h1>Emmanuel's Dream</h1> </center>
+
+        <!-- Activity 1 below-->
+        <h2>
+            Task 1 - Listen to a reading of "Emmanuel's Dream".
+        </h2>
+         <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/nilrUvyWhnI" frameborder="0" allowfullscreen></iframe>
+        </iframe></center>
+        <br>
+        <!-- Activity 2 below-->
+        <h2> Task 2 - Quiz time! </h2> 
+         <center> <button class = "button-85"onclick="myFunction()">Quiz!</button></center>
+         <Script> function myFunction() { onclick=location.href="quiz.html"; }
+         </Script>
+
+        <!-- Activity 3 below-->
+        <center> 
+        <h2>Task 3 - Fill in the blanks:</h2>
+        <p1> <pre>Word beginning with B: Emmanuel was a very <input type=''text'' name=''testfield'' /> boy.
+            Word beginning with D, means extremely focused to: Emmanuel was <input type=''text'' name=''testfield'' /> to gain peoples respect.
+            Opposite of respectful: The people sof Accra were very <input type=''text'' name=''testfield'' /> to Emmanuel.
+            A condition that limits someone, but doesnt define them: Emmanuel was born without a leg, this is a <input type=''text'' name=''testfield'' />, not an inability.
+            We should always treat everyone with <input type=''text'' name=''testfield'' />. </pre>
+        </p1>
+    </center> 
+        <h3> The overarching message of the story is perseverance and resilience – never give up. </h3>
+        <br><br>
+
+         <!--Activity 4 below-->
+        <h2> Task 4 - Fill out the table below.
+           <h3> Think of a time when you have struggled with someone, or a time where you found something difficult. Then write down 3 negative feelings things that remembering that occasion made you feel. Then write three positive feelings. Think about how it makes you feel after hearing Emmanuel's story?</h3>
+        <table class="myOtherTable">
+        <tr> 
+            <th> Positive Feelings </th>
+            <th> Negative Feelings</th>
+        </tr>
+            <TR> 
+                <td><input type=''text'' name=''testfield'' /> </td>
+                <td><input type=''text'' name=''testfield'' /> </td>
+            </TR>
+            <TR> 
+                <td><input type=''text'' name=''testfield'' /> </td>
+                <td><input type=''text'' name=''testfield'' /> </td>
+            </TR>
+            <TR> 
+                <td><input type=''text'' name=''testfield'' /> </td>
+                <td><input type=''text'' name=''testfield'' /> </td>
+            </TR>
+
+        
+            </table>
+
+
+
+
+
+<br><br>
+        <!-- Actviity 4 below-->
+        <h2> Conclusion - 5 Key take-aways:</h2>
+        <pre><p1>-Just because someone looks different, does not mean they should be treated differently. Treat everyone with respect and kindness!
+-Never give up! Always work hard towards your goals.
+-A disability is not an inability!
+-Face everything with courage. Be brave and risk-taking!
+-You are strong. You are smart. You can do anything!
+             </p1></pre>
+
+
+
+
+<!--
+        <p1> testing </p1> <br>
+        <div style="display: inline-block">
+            <input class="fill-out"></input>
+            <h5 class="nowrap">Test</h5>
+        </div> -->
+    </body>
+    </html>
