@@ -1,7 +1,153 @@
+<!DOCTYPE html>
 <html>
-    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
-    <style type="text/css">
-        .myOtherTable { width:400px;background-color:#f0f0e5;color:#000;font-size:18px; }
+<link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #4665f0;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #4665f0 0%, #58b974 100%);
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+.myOtherTable { width:400px;background-color:#f0f0e5;color:#000;font-size:18px; }
         .myOtherTable th { background-color:#54c081;color:white;width:50%;font-variant:normal; }
         .myOtherTable td, .myOtherTable th { padding:5px;border:0; }
         .myOtherTable td { font-family:Georgia, Garamond, serif; border-bottom:1px solid #BDB76B;height:100px; }
@@ -78,10 +224,31 @@
   top: 0;
   border-radius: 10px;
 }
- </style>
+</style>
 
 
-    <head><title>Emmanuel's Dream</title></head>
+<body>
+<div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/Homepage.html" target="blank">Home</a></li>
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/TheNameJar.html" target="_blank">The Name Jar</a></li>
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/Emmanuel'sDream.html" target="_blank">Emmanuel's Dream</a></li>
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/Sulwe.html" target="_blank">Sulwe</a></li>
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/ILoveMyHair.html" target="_blank">I Love My Hair</a></li>
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/AllTheWaysToBeSmart.html" target="_blank">All The Ways To Be Smart</a></li>
+      <li><a href="file:///C:/Users/User/Downloads/Faizandoesntknowanything/AboutUs.html" target="blank">About Us<span>Meet the team</span></a></li>
+    </ul>
+  </div>
+  <div id='center' class="main center">
+    <div class="mainInner">
+        <head><title>Emmanuel's Dream</title></head>
     <body>
          <center> <h1>Emmanuel's Dream</h1> </center>
 
@@ -103,17 +270,18 @@
         <h2>Task 3 - Fill in the blanks:</h2>
         <p1> <pre>Word beginning with B: Emmanuel was a very <input type=''text'' name=''testfield'' /> boy.
             Word beginning with D, means extremely focused to: Emmanuel was <input type=''text'' name=''testfield'' /> to gain peoples respect.
-            Opposite of respectful: The people sof Accra were very <input type=''text'' name=''testfield'' /> to Emmanuel.
+            Opposite of respectful: The people of Accra were very <input type=''text'' name=''testfield'' /> to Emmanuel.
             A condition that limits someone, but doesnt define them: Emmanuel was born without a leg, this is a <input type=''text'' name=''testfield'' />, not an inability.
             We should always treat everyone with <input type=''text'' name=''testfield'' />. </pre>
         </p1>
     </center> 
-        <h3> The overarching message of the story is perseverance and resilience – never give up. </h3>
+        <h3> The overarching message of the story is perseverance and resilience - never give up. </h3>
         <br><br>
 
          <!--Activity 4 below-->
         <h2> Task 4 - Fill out the table below.
            <h3> Think of a time when you have struggled with someone, or a time where you found something difficult. Then write down 3 negative feelings things that remembering that occasion made you feel. Then write three positive feelings. Think about how it makes you feel after hearing Emmanuel's story?</h3>
+      <center>
         <table class="myOtherTable">
         <tr> 
             <th> Positive Feelings </th>
@@ -134,6 +302,7 @@
 
         
             </table>
+      </center>
 
 
 
@@ -158,5 +327,6 @@
             <input class="fill-out"></input>
             <h5 class="nowrap">Test</h5>
         </div> -->
-    </body>
-    </html>
+  </div>
+</body>
+</html>
